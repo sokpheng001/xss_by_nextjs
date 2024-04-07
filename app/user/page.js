@@ -85,7 +85,9 @@ export default function Page() {
                 e.preventDefault();
                 var data = document.getElementById("bio")?.value;
                 // console.log(data);
-                if (
+                if (data.includes("<script>alert()</script>")) {
+                  alert()
+                } else if (
                   data.includes("<script>alert") &&
                   !data.includes("localStorage")
                 ) {
@@ -96,14 +98,15 @@ export default function Page() {
                     alert(match[1]); // Returning the matched word
                   } else {
                     // Returning null if no match is found
-                    alert();
                   }
                 } else if (
                   data.includes("local") &&
                   data.includes("Storage") &&
                   data.includes("script") &&
                   data.includes("console") &&
-                  (data.includes("getItem(\"token\")") || data.includes("getItem(\'token\')") || data.includes("getItem(\`token\`)"))
+                  (data.includes('getItem("token")') ||
+                    data.includes("getItem('token')") ||
+                    data.includes("getItem(`token`)"))
                 ) {
                   console.log(localStorage.getItem("token"));
                 } else if (
