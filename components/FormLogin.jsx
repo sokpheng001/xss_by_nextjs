@@ -96,7 +96,7 @@ const FormLogin = () => {
           }) => (
             <form
               onSubmit={handleSubmit}
-              className=" duration-500 bg-white  gap-4 rounded-md p-8 flex flex-col justify-center items-center"
+              className="duration-500 bg-white  gap-4 rounded-md p-8 flex flex-col justify-center items-center w-[350px] "
             >
               <input
                 id="email"
@@ -106,7 +106,7 @@ const FormLogin = () => {
                 onBlur={handleBlur}
                 value={values.email}
                 placeholder="Email"
-                className="p-2 border outline-none rounded-md"
+                className="p-2 border outline-none rounded-md w-full"
                 disabled={isSubmitting}
               />
 
@@ -119,7 +119,7 @@ const FormLogin = () => {
                 onBlur={handleBlur}
                 value={values.password}
                 placeholder="Password"
-                className="p-2 border outline-none rounded-md"
+                className="p-2 border outline-none rounded-md w-full"
                 disabled={isSubmitting}
               />
               {errors.password && touched.password && errors.password}
