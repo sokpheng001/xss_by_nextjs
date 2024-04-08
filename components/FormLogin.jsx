@@ -96,7 +96,7 @@ const FormLogin = () => {
           }) => (
             <form
               onSubmit={handleSubmit}
-              className="duration-500 bg-white  gap-4 rounded-md p-8 flex flex-col justify-center items-center w-[350px] "
+              className="duration-500 bg-white  gap-4 rounded-md p-8 flex flex-col justify-center items-center md:w-[350px] "
             >
               <input
                 id="email"
